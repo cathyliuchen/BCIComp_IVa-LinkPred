@@ -5,11 +5,12 @@
 
 ## Dataset
 
-- Waiting
+- BCI Competition 2015 NER
+- IVa 
 
 ## Refered Papers Map:
 
-- Graph Link Prediction: http://naotu.baidu.com/file/52a7a9fbcf4d5845a7266da5f3937b3d?token=a0e8ae77a1b3bb78
+- Paper Map: http://naotu.baidu.com/file/52a7a9fbcf4d5845a7266da5f3937b3d?token=a0e8ae77a1b3bb78
 
 ## Working Log
 
