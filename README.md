@@ -7,6 +7,14 @@
 
 - BCI Competition 2015 NER
 - IVa 
+- LinkPred_Graphs
+  - The epochs are pre-processed at [8, 30] Hz using a 4th order butterworth filter and segmented from the trigger onset to 3.5 seconds. The constants file contains channel related information and sampling rate. To load the numpy files, use the following command: np.load(filename, allow_pickle=True)
+
+To retrieve individual information, use:
+
+Example: get the epochs from the numpy file for subject aa: test = np.load(path + '/preprocessed_epochs_aa.npy', allow_pickle=True) epochs = test.item().get('epochs')
+
+
 
 ## Refered Papers Map:
 
