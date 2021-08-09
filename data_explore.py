@@ -59,8 +59,8 @@ for file in filenames:
     labels = raw_data.item().get('labels')
     for trial in range(0, 118):
         for g in range(0, no_graph):
-            sliced_epoch[subject + '_trail_' + str(trial+1) + '_graph_' + str(g+1)] = \
-                epochs[:, g*windows[id]:(g+1)*windows[id]]
+            sliced_epoch[subject + '_trail_' + str(trial+1) + '_graph_' + str(g+1)] = epochs[trial]\
+                [:, g*windows[id]:(g+1)*windows[id]]
             # print(sub_epoch)
 
 
@@ -71,9 +71,12 @@ for file in filenames:
             sliced_label[subject + '_trail_' + str(trial+1) + '_graph_' + str(g+1)] = labels[trial]
             adj_matrix = cal_adjacency_matrix(graph, channels)
             temp_adj_matrix = np.array(adj_matrix)
-            adj_dict[file + '_trial_' + str(trial+1) + '_graph_' + str(g+1)] = temp_adj_matrix
+            adj_dict[file + '_trial_' + str(trial+1) + '_graph_' + str(g+1)] = \
+                (temp_adj_matrix, sliced_label[subject + '_trail_' + str(trial+1) + '_graph_' + str(g+1)])
         print(adj_dict)
-        
+
+
+np.save('adj_dict.npy', adj_dict)
 
 
 
