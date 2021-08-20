@@ -30,3 +30,4 @@
 - https://shimo.im/docs/38d8PTDxhTKcrxXW/ 「Project_Saugat2019 Working Log」
 
 ## Code Ref：
+- GCN-GAN: https://github.com/jiangqn/GCN-GAN-pytorch
