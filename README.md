@@ -1,4 +1,4 @@
-# Project_Saugat2019
+# Project_LinkPredict
 
 ## Paper
 - Systematic Enchancement of Functional Connectivity In Brain-Computer Interfacing Using Common Spatial Patterns and Tangent Space Mapping
