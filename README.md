@@ -31,3 +31,4 @@
 
 ## Code Ref：
 - GCN-GAN: https://github.com/jiangqn/GCN-GAN-pytorch
+- SubGNN：https://github.com/mims-harvard/SubGNN
