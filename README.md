@@ -1,4 +1,4 @@
-# Project_LinkPredict
+# BCIComp_IVa : LinkPred 
 
 ## Paper
 - Systematic Enchancement of Functional Connectivity In Brain-Computer Interfacing Using Common Spatial Patterns and Tangent Space Mapping
