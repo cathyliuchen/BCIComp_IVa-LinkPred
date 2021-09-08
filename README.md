@@ -19,11 +19,11 @@
 
 - Data file structure：
 - data/
-- - epochs/constants.npy, preprocessed_epochs_aa.npy, preprocessed_epochs_al.npy, preprocessed_epochs_av.npy, preprocessed_epochs_aw.npy, preprocessed_epochs_ay.npy
-- - adj_dict/aa...al/0.npy, 1.npy ... 
-- - dataset/aa...al/ rt_foot_train_data.npy, rt_foot_train_label.npy, rt_foot_test_data.npy, rt_foot_test_label.npy, 
+ - epochs/constants.npy, preprocessed_epochs_aa.npy, preprocessed_epochs_al.npy, preprocessed_epochs_av.npy, preprocessed_epochs_aw.npy, preprocessed_epochs_ay.npy
+ - adj_dict/aa...al/0.npy, 1.npy ... 
+ - dataset/aa...al/ rt_foot_train_data.npy, rt_foot_train_label.npy, rt_foot_test_data.npy, rt_foot_test_label.npy, 
                      rt_hand_train_data.npy, rt_hand_train_label.npy, rt_hand_test_data.npy, rt_hand_test_label.npy
-- - result/aa...al/ rt_hand_train_data_generator.pkl, rt_foot_train_data_generator.pkl
+ - result/aa...al/ rt_hand_train_data_generator.pkl, rt_foot_train_data_generator.pkl
 
 ## Refered Papers：
 
