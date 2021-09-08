@@ -13,7 +13,7 @@
     - Example: get the epochs from the numpy file for subject aa: test = np.load(path + '/preprocessed_epochs_aa.npy', allow_pickle=True) epochs = test.item().get('epochs')
 
 - Data Download:
- -  链接：https://pan.baidu.com/s/17Kruh22HYh0-dFhVdY8pOA  提取码：85qt
+ -  Link：https://pan.baidu.com/s/1DXca4jFZBLcpm-kq5mPSWA   Extract Number：u54w
 
 ## Data file structure：
 -   data/
