@@ -17,7 +17,7 @@
 - Data Download:
  -  链接：https://pan.baidu.com/s/17Kruh22HYh0-dFhVdY8pOA  提取码：85qt
 
-- Data file structure：
+## Data file structure：
 -   data/
       - epochs/constants.npy, preprocessed_epochs_aa.npy, preprocessed_epochs_al.npy, preprocessed_epochs_av.npy, preprocessed_epochs_aw.npy, preprocessed_epochs_ay.np
       - adj_dict/aa...al/0.npy, 1.npy ... 
