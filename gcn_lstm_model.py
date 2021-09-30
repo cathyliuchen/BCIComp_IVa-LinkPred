@@ -41,7 +41,7 @@ class Classifier(nn.Module):
             num_layers=1,
             batch_first=True
         )
-        self.classifier = nn.Linear(lstm_features, n_class)
+        self.classifier = nn.Linear(lstm_features*window_size, n_class)
 
     def forward(self, in_shots):
         """
@@ -58,8 +58,8 @@ class Classifier(nn.Module):
         gcn_output = self.gcn(adjacency, nodes)
         gcn_output = gcn_output.view(batch_size, window_size, -1)
         output, (_, _) = self.lstm(gcn_output)
-        output = output.view(batch_size,-1)
-        result = self.classifier(output)
+        reshape_output = output.view(batch_size, -1)
+        result = self.classifier(reshape_output)
         return result
 
 
