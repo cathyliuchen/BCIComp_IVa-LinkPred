@@ -58,8 +58,8 @@ class Classifier(nn.Module):
         gcn_output = self.gcn(adjacency, nodes)
         gcn_output = gcn_output.view(batch_size, window_size, -1)
         output, (_, _) = self.lstm(gcn_output)
-        reshape_output = output.view(batch_size, -1)
-        result = self.classifier(reshape_output)
+        output = output.contiguous().view(batch_size, -1)
+        result = self.classifier(output)
         return result
 
 
