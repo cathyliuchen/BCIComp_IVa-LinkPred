@@ -33,7 +33,8 @@
 
 ## Working Log
 
-- https://shimo.im/docs/38d8PTDxhTKcrxXW/ 「Project_Saugat2019 Working Log」
+- 【腾讯文档】IVaComp Working Log 
+https://docs.qq.com/doc/DU1RmTXV3b1ZCb01V
 
 ## Code Ref：
 - GCN-GAN: https://github.com/jiangqn/GCN-GAN-pytorch
