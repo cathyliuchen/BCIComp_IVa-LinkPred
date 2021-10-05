@@ -32,6 +32,7 @@
 - https://shimo.im/docs/gpHTHChVVjtCPJDK/ 「Comp2015 & IVa Dataset Thinkings」(Comment allowed)
 
 ## Working Log
+- https://shimowendang.com/docs/38d8PTDxhTKcrxXW/ 「IVa-Comp: LinkPred Working Log」，可复制链接后用石墨文档 App 或小程序打开 (Before Oct.)
 
 - 【腾讯文档】IVaComp Working Log 
 https://docs.qq.com/doc/DU1RmTXV3b1ZCb01V
