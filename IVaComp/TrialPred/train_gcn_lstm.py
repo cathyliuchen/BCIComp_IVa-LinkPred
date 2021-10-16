@@ -27,9 +27,9 @@ log_interval = config['log_interval']
 
 
 # build and load data
-train_data_save_path = 'dataset/' + subject + '/train.npy'
+train_data_save_path = 'dataset/' + subject + '/train_data.npy'
 train_label_save_path = 'dataset/' + subject + '/train_label.npy'
-test_data_save_path = 'dataset/' + subject + '/test.npy'
+test_data_save_path = 'dataset/' + subject + '/test_data.npy'
 test_label_save_path = 'dataset/' + subject + '/test_label.npy'
 
 train_data = IVaDataset(train_data_save_path, train_label_save_path)
