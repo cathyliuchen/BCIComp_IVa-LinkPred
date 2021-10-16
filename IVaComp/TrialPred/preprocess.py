@@ -13,7 +13,7 @@ for sub in subjects:
 for subject in subjects:
     trials = glob('../data/adj_dict/' + subject + '/*.npy')
     # or using sparse matrices
-    trials = glob('../data/sparse_adj_dict/' + subject + '/*.npy')
+    # trials = glob('../data/sparse_adj_dict/' + subject + '/*.npy')
     NO_GRAPH = 10
     NODES = 118
     trial_graph = np.zeros((NO_GRAPH,NODES, NODES))
@@ -25,20 +25,22 @@ for subject in subjects:
             graph_id = int(item[0].split('_')[-1]) - 1
             trial_graph[graph_id] = item[1][0]
         label.append(item[1][1])
-        #print("trial_graph:", trial_graph)
+        print("trial_graph:", trial_graph)
         data.append(trial_graph)
-        #print("trial_data:", trial_data)
+        print("trial_data:", data)
 
-# split trials into training and testing dataset：200 for training， 80 for testing.
-train_data = data[0:200]
-train_label = label[0:200]
-test_data = data[200:280]
-test_label = label[200:280]
+    # split trials into training and testing dataset：200 for training， 80 for testing.
+    train_data = data[0:200]
+    train_label = label[0:200]
+    test_data = data[200:280]
+    test_label = label[200:280]
 
-# save train and test dataset: data and labels.
-np.save('dataset/' + subject + '/train_data.npy', train_data)
-np.save('dataset/' + subject + '/train_label.npy', train_label)
-np.save('dataset/' + subject + '/test_data.npy', test_data)
-np.save('dataset/' + subject + '/test_label.npy', test_label)
+    # save train and test dataset: data and labels.
+    np.save('dataset/' + subject + '/train_data.npy', train_data)
+    np.save('dataset/' + subject + '/train_label.npy', train_label)
+    np.save('dataset/' + subject + '/test_data.npy', test_data)
+    np.save('dataset/' + subject + '/test_label.npy', test_label)
 
 print("Finished all subjects.")
+
+# Check: e.g. subject aa
