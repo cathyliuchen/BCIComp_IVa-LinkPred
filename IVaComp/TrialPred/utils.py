@@ -7,8 +7,8 @@ class IVaDataset(Dataset):
 
     def __init__(self, data_path, label_path):
         super(IVaDataset, self).__init__()
-        self.data = torch.from_numpy(np.load(data_path, allow_pickle=True))
-        self.label = torch.from_numpy(np.load(label_path, allow_pickle=True))
+        self.data = torch.tensor(np.load(data_path, allow_pickle=True), dtype=torch.float32)
+        self.label = torch.tensor(np.load(label_path, allow_pickle=True), dtype=torch.int32)
         self.num = np.shape(self.data)[0]
 
     def __len__(self):
