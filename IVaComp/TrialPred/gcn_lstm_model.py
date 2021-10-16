@@ -28,7 +28,7 @@ class GraphConvolution(nn.Module):
 
 class Classifier(nn.Module):
 
-    def __init__(self, window_size, node_num, in_features, out_features, lstm_features, num_class):
+    def __init__(self, window_size, node_num, in_features, out_features, lstm_features):
         super(Classifier, self).__init__()
         self.window_size = window_size
         self.node_num = node_num
@@ -41,7 +41,7 @@ class Classifier(nn.Module):
             num_layers=1,
             batch_first=True
         )
-        self.ffn = nn.Linear(lstm_features*window_size, num_class)
+        self.ffn = nn.Linear(lstm_features*window_size, 1)
         self.output = nn.Sigmoid()
 
     def forward(self, in_shots):
@@ -62,12 +62,6 @@ class Classifier(nn.Module):
         lstm_output = lstm_output.contiguous().view(batch_size, -1)
         ffn_output = self.ffn(lstm_output)
         output = self.output(ffn_output)
-        return output
-
-        # ffn_output = self.ffn(lstm_output).flatten()
-        # outlayer = nn.Sigmoid()
-        # output = outlayer(ffn_output)
-        # # output = nn.Sigmoid(torch.flatten(self.ffn(lstm_output)))
         return output
 
 
