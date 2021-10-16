@@ -1,0 +1,20 @@
+dataset: dataset
+subject: ay
+task: foot
+node_num: 118
+window_size: 4
+# window_size: 5  # snapshot
+test_rate: 0.1
+in_features: 1
+out_features: 64
+lstm_features: 128
+disc_hidden: 512
+pretrain_learning_rate: 0.005
+d_learning_rate: 0.00001
+g_learning_rate: 0.00001
+batch_size: 64
+pretrain_epoches: 10
+gan_epoches: 2
+gradient_clip: 5.0
+weight_clip: 0.01
+epsilon: 0.01

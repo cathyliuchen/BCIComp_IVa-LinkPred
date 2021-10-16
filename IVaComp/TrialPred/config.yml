@@ -1,0 +1,16 @@
+dataset: dataset
+subject: aa
+task: hand
+node_num: 118
+window_size: 10
+epochs: 50
+log_interval: 10
+in_features: 1
+out_features: 64
+lstm_features: 128
+lr: 0.01
+batch_size: 16
+gradient_clip: 5.0
+weight_clip: 0.0001
+epsilon: 0.001
+num_class: 2
