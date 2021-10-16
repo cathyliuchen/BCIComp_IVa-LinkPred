@@ -24,7 +24,7 @@ for subject in subjects:
         for item in trial.items():
             graph_id = int(item[0].split('_')[-1]) - 1
             trial_graph[graph_id] = item[1][0]
-        label.append(item[1][1])
+        label.append(item[1][1] - 1) # relabel 1, 2 as 0, 1 respectively.
         print("trial_graph:", trial_graph)
         data.append(trial_graph)
         print("trial_data:", data)
