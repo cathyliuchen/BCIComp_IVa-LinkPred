@@ -17,12 +17,12 @@ class IVaDataset(Dataset):
     def __getitem__(self, item):
         return self.data[item], self.label[item]
 
-# check: construct dataset for aa
-train_data_path = 'dataset/aa/train.npy'
-train_label_path = 'dataset/aa/train_label.npy'
-test_data_path = 'dataset/aa/test.npy'
-test_label_path = 'dataset/aa/test.npy'
-train_data = IVaDataset(train_data_path, train_label_path)
-test_data = IVaDataset(test_data_path, test_label_path)
+# # check: construct dataset for aa
+# train_data_path = 'dataset/aa/train.npy'
+# train_label_path = 'dataset/aa/train_label.npy'
+# test_data_path = 'dataset/aa/test.npy'
+# test_label_path = 'dataset/aa/test.npy'
+# train_data = IVaDataset(train_data_path, train_label_path)
+# test_data = IVaDataset(test_data_path, test_label_path)
 # print(train_data.__getitem__(0))
 
