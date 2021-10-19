@@ -2,7 +2,7 @@ import numpy as np
 from glob import glob
 import os
 
-# Generate folders to store dataset
+# # Generate folders to store dataset
 subjects = ['aa', 'av', 'aw', 'al', 'ay']
 for sub in subjects:
     path = 'dataset/' + sub
@@ -24,7 +24,9 @@ for subject in subjects:
         for item in trial.items():
             graph_id = int(item[0].split('_')[-1]) - 1
             trial_graph[graph_id] = item[1][0]
-        label.append(item[1][1] - 1) # relabel 1, 2 as 0, 1 respectively.
+
+        label.append((item[1][1]) - 1)
+
         print("trial_graph:", trial_graph)
         data.append(trial_graph)
         print("trial_data:", data)
@@ -41,6 +43,11 @@ for subject in subjects:
     np.save('dataset/' + subject + '/test_data.npy', test_data)
     np.save('dataset/' + subject + '/test_label.npy', test_label)
 
-print("Finished all subjects.")
+# print("Finished all subjects.")
 
 # Check: e.g. subject aa
+aa_train_data = np.load('dataset/aa/train_data.npy', allow_pickle=True)
+aa_train_label = np.load('dataset/aa/train_label.npy', allow_pickle=True)
+print(aa_train_data.shape)  # (200, 10, 118, 118)
+print(aa_train_label.shape) # (200,2)
+

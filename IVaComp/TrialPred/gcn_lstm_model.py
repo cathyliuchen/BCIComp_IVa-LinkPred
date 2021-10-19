@@ -28,12 +28,13 @@ class GraphConvolution(nn.Module):
 
 class Classifier(nn.Module):
 
-    def __init__(self, window_size, node_num, in_features, out_features, lstm_features):
+    def __init__(self, window_size, node_num, in_features, out_features, lstm_features, num_classes):
         super(Classifier, self).__init__()
         self.window_size = window_size
         self.node_num = node_num
         self.in_features = in_features
         self.out_features = out_features
+        self.num_classes = num_classes
         self.gcn = GraphConvolution(window_size, in_features, out_features)
         self.lstm = nn.LSTM(
             input_size=out_features * node_num,
@@ -41,8 +42,7 @@ class Classifier(nn.Module):
             num_layers=1,
             batch_first=True
         )
-        self.ffn = nn.Linear(lstm_features*window_size, 1)
-        self.output = nn.Sigmoid()
+        self.ffn = nn.Linear(lstm_features*window_size, num_classes)
 
     def forward(self, in_shots):
         """
@@ -60,9 +60,10 @@ class Classifier(nn.Module):
         gcn_output = gcn_output.view(batch_size, window_size, -1)
         lstm_output, (_, _) = self.lstm(gcn_output)
         lstm_output = lstm_output.contiguous().view(batch_size, -1)
-        ffn_output = self.ffn(lstm_output)
-        output = self.output(ffn_output)
+        output = self.ffn(lstm_output)
         return output
+
+
 
 
 
