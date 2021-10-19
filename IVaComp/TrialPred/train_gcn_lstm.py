@@ -63,7 +63,6 @@ model = Classifier(
     in_features=config['in_features'],
     out_features=config['out_features'],
     lstm_features=config['lstm_features'],
-    num_class=config['num_class']
 )
 
 model = model.cuda()
