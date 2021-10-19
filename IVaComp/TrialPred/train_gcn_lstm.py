@@ -78,7 +78,7 @@ def train(train_loader):
     train_loss, n_samples = 0, 0
     for batch_idx, data in enumerate(train_loader):
         train_data = data[0].cuda()
-        train_label = data[1].cuda()
+        train_label = data[1].long().cuda()
         optimizer.zero_grad()
         output = model(train_data)
         loss = criterion(output, train_label)
